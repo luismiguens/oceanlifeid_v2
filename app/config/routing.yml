@@ -1,0 +1,5 @@
+skaphandrus_oceanlifeid:
+    resource: "@SkaphandrusOceanlifeidBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

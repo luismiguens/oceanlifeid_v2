@@ -1,0 +1,27 @@
+skaphandrus_oceanlifeid_hello:
+    pattern:  /hello/{name}
+    defaults: { _controller: SkaphandrusOceanlifeidBundle:Default:hello }
+    
+#homepage:
+#    path:      /{_locale}
+#    defaults:  
+#      _controller: SkaphandrusOceanlifeidBundle:Default:index
+#      _locale: en 
+#    requirements:
+#      _locale:  en|pt|fr|it|es|zh|de|ja
+#      
+#      
+homepage:
+    path:      /{_locale}
+    defaults:  { _controller: SkaphandrusOceanlifeidBundle:Default:index, _locale: en }
+    requirements:
+        _locale:  en|pt|fr|it|es|zh|de|ja
+      
+      
+skaphandrus_oceanlifeid_play:
+    pattern:  /play
+    defaults: { _controller: SkaphandrusOceanlifeidBundle:Default:play }
+          
+      
+      
+      

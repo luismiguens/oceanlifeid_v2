@@ -1,0 +1,59 @@
+
+<!-- ******PROMO****** --> 
+
+<section id="promo" class="promo section offset-header has-pattern">
+    <div class="container">
+        <div class="row">
+            <div class="overview col-md-8 col-sm-12 col-xs-12">
+                <h2 class="title">{% trans %}promote mobile app title{% endtrans %}</h2>
+                <ul class="summary">
+                    <li>{% trans %}promote mobile app summary 01{% endtrans %}</li>
+                    <li>{% trans %}promote mobile app summary 02{% endtrans %}</li>
+                    <li>{% trans %}promote mobile app summary 03{% endtrans %}</li>
+                    <li>{% trans %}promote mobile app summary 04{% endtrans %}</li>
+                </ul>
+                <div class="download-area">
+                    <ul class="btn-group list-inline">
+                        <li class="ios-btn"><a href="https://itunes.apple.com/{{app.request.locale}}/app/ocean-life-id/id894101166?ls=1&mt=8">{% trans %}Download from the App Store{% endtrans %}</a></li>
+                        <li class="android-btn"><a href="https://play.google.com/store/apps/details?id=com.skaphandrus.oceanlifeid">{% trans %}Get it from Google Play{% endtrans %}</a></li>
+                    </ul>
+                    <div class="note text-center">
+                        <p>{% trans %}30% OFF - Now only $0.99{% endtrans %}<br />{% trans %}Offer ends 31st March{% endtrans %}</p>
+                        <span class="left-arrow"></span>
+                        <span class="right-arrow"></span>
+                    </div><!--//note-->
+                </div>
+            </div><!--//overview-->
+
+            <!--// iPhone starts -->
+            <div class="phone iphone iphone-black col-md-4 col-sm-12 col-xs-12 ">
+                <div class="iphone-holder phone-holder">
+                    <div class="iphone-holder-inner">
+                        <div class="slider flexslider" >
+                            <ul class="slides">
+                                <li>
+                                    <img src="{{ asset('bundles/skaphandrusoceanlifeid/images/iphone/iphone-slide-01_'~language~'.png') }}"  alt="Ocean Life ID" />
+                                </li>
+                                <li>
+                                    <img src="{{ asset('bundles/skaphandrusoceanlifeid/images/iphone/iphone-slide-05_'~language~'.png') }}"  alt="Taxonomic groups" />
+                                </li>
+                                <li>
+                                    <img src="{{ asset('bundles/skaphandrusoceanlifeid/images/iphone/iphone-slide-03_'~language~'.png') }}"  alt="Color critérias" />
+                                </li>
+
+                            </ul><!--//slides-->
+                        </div><!--//flexslider-->   
+                    </div><!--//iphone-holder-inner-->                    
+                </div><!--//iphone-holder-->                   
+            </div><!--//iphone-->  
+            <!--// iPhone ends -->
+
+
+        </div><!--//row-->
+    </div><!--//container-->
+</section><!--//promo-->
+
+
+
+
+

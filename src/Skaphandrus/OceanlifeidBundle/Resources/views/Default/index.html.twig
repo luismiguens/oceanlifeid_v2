@@ -1,0 +1,59 @@
+{% extends 'SkaphandrusOceanlifeidBundle::layout.html.twig' %}
+
+{% block body %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=293963754141033&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+{% if app.request.locale == 'it' 
+        or app.request.locale == 'es'  
+        or app.request.locale == 'fr' 
+        or app.request.locale == 'zh' 
+        or app.request.locale == 'de'
+        or app.request.locale == 'ja'
+%}
+{% set language = 'en' %}
+{% else %}                
+{% set language = app.request.locale %}   
+{% endif %}
+
+
+   {% include 'SkaphandrusOceanlifeidBundle:Default:menu.html.twig' with {'is_blog': 'false'} %}
+
+      {% include 'SkaphandrusOceanlifeidBundle:Default:promo.html.twig' %}
+      {% include 'SkaphandrusOceanlifeidBundle:Default:features.html.twig' %}
+      {% include 'SkaphandrusOceanlifeidBundle:Default:how.html.twig' %}
+      {% include 'SkaphandrusOceanlifeidBundle:Default:faq.html.twig' %}
+      {% include 'SkaphandrusOceanlifeidBundle:Default:story.html.twig' %}
+      {% include 'SkaphandrusOceanlifeidBundle:Default:screenshots.html.twig' %}
+      {% include 'SkaphandrusOceanlifeidBundle:Default:contact.html.twig' %}
+    
+
+
+<!-- ******FOOTER****** --> 
+<footer class="footer">
+    <div class="container">
+        <small class="copyright pull-left"><a href="http://skaphandrus.com">Copyright &copy; 2014 Skaphandrus</a></small>
+        <ul class="links list-inline">
+            <li><a href="#">{% trans %}Terms{% endtrans %}</a>&nbsp;</li>
+            <li><a href="#">{% trans %}Privacy{% endtrans %}</a>&nbsp;</li>
+                        
+            <li class="pull-right"><a href="{{ path('homepage', {'_locale':'ja' }) }}">日本語</a>&nbsp;</li>
+            <li class="pull-right"><a href="{{ path('homepage', {'_locale':'de' }) }}">Deutsch</a>&nbsp;</li>
+            <li class="pull-right"><a href="{{ path('homepage', {'_locale':'zh' }) }}">繁體中文</a>&nbsp;</li>
+            <li class="pull-right"><a href="{{ path('homepage', {'_locale':'es' }) }}">Español</a>&nbsp;</li>
+            <li class="pull-right"><a href="{{ path('homepage', {'_locale':'it' }) }}">Italiano</a>&nbsp;</li>
+            <li class="pull-right"><a href="{{ path('homepage', {'_locale':'fr' }) }}">Français</a>&nbsp;</li>
+            <li class="pull-right"><a href="{{ path('homepage', {'_locale':'pt' }) }}">Português</a>&nbsp;</li>
+            <li class="pull-right"><a href="{{ path('homepage', {'_locale':'en' }) }}">English</a>&nbsp;</li>
+                        
+        </ul>
+    </div>
+</footer><!--//footer-->
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{# empty Twig template #}
+
+
+
+
+
+
+<!-- ******HEADER****** --> 
+<header id="top" class="header navbar-fixed-top">  
+    <div class="container">            
+        <h1 class="logo pull-left">
+            <a class="" href="{{ url('homepage')}}#promo">
+                <img id="logo-image" class="logo-image" src="{{ asset('bundles/skaphandrusoceanlifeid/images/logo/logo.png') }}" alt="Ocean Life ID">
+                <span class="logo-title"></span>
+            </a>
+        </h1><!--//logo-->              
+        <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><!--//nav-toggle-->
+            </div><!--//navbar-header-->            
+            <div class="navbar-collapse collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    
+                    {% if is_blog == true %}
+                    
+                    <li class="nav-item"><a href="{{ url('homepage')}}#promo">Home</a></li>
+                    <li class="nav-item"><a href="{{ url('homepage')}}#features">{% trans %}Features{% endtrans %}</a></li>
+                    <li class="nav-item"><a href="{{ url('homepage')}}#how">{% trans %}How it works{% endtrans %}</a></li>
+                    <li class="nav-item"><a href="{{ url('homepage')}}#faq">{% trans %}FAQ{% endtrans %}</a></li>
+                    <li class="nav-item"><a href="{{ url('homepage')}}#story">{% trans %}Story{% endtrans %}</a></li>
+                    <li class="nav-item last"><a href="{{ url('homepage')}}#contact">{% trans %}Contact{% endtrans %}</a></li>
+                    {#<li class="nav-item"><a href="{{ url('sonata_news_home') }}">{% trans %}Blog{% endtrans %}</a></li>#}
+                    
+                    {% else %}
+                    <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+                    <li class="nav-item"><a class="scrollto" href="#features">{% trans %}Features{% endtrans %}</a></li>
+                    <li class="nav-item"><a class="scrollto" href="#how">{% trans %}How it works{% endtrans %}</a></li>
+                    <li class="nav-item"><a class="scrollto" href="#faq">{% trans %}FAQ{% endtrans %}</a></li>
+                    <li class="nav-item"><a class="scrollto" href="#story">{% trans %}Story{% endtrans %}</a></li>
+                    <li class="nav-item last"><a class="scrollto" href="#contact">{% trans %}Contact{% endtrans %}</a></li>
+                    {#<li class="nav-item"><a href="{{ url('sonata_news_home') }}">{% trans %}Blog{% endtrans %}</a></li>#}
+                    
+                    {% endif %}
+                    
+                    
+                    
+                    
+                </ul><!--//nav-->
+            </div><!--//navabr-collapse-->
+        </nav><!--//main-nav-->           
+    </div>
+</header><!--//header-->

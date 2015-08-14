@@ -1,0 +1,39 @@
+
+    <!-- ******HOW****** --> 
+    <section id="how" class="how section has-pattern">
+        <div class="container">
+            <div class="row">
+                
+                <div class="content col-md-6 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6 text-center">
+                   <h2 class="title">{% trans %}How it works{% endtrans %}</h2>
+                   <!-- <p class="intro">You can <a href="http://blog.sensortower.com/blog/2013/07/19/3-ways-to-create-a-great-ios-app-demo-video-without-breaking-the-bank/" target="_blank">create a video demo</a> for your app to demonstrate how the app works. You can also <a href="http://www.qrstuff.com/" target="_blank">generate QR codes</a> for the app download links.</p>-->
+                    <div class="qr-codes hidden-sm hidden-xs">
+                        <div class="note">
+                            <p>{% trans %}Scan the QR codes{% endtrans %}</p>
+                            <span class="left-arrow"></span>
+                            <span class="right-arrow"></span>
+                        </div><!--//note-->
+                        <div class="row">
+                            <div class="item col-md-6 col-sm-6">
+                                <img src="{{ asset('bundles/skaphandrusoceanlifeid/images/qrcodes/app_itunes.png') }}" alt="" />
+                                <p>{% trans %}Download for iOS{% endtrans %}</p>
+                            </div><!--//item-->
+                            <div class="item col-md-6 col-sm-6">
+                                <img src="{{ asset('bundles/skaphandrusoceanlifeid/images/qrcodes/app_play_new.png') }}" alt="" />
+                                <p>{% trans %}Download for Android{% endtrans %}</p>
+                            </div><!--//item-->
+                        </div>                    
+                    </div><!--//qr-codes-->
+                </div><!--//content-->
+
+                <div id="video-container" class="video-container col-md-6 col-sm-6 col-xs-12 col-md-pull-6 col-sm-pull-6">
+                    <iframe width="560" height="315" src="//www.youtube.com/embed/UrutcDABNek?list=UUmVwYkZD3FVFF0gAx--xPHg" frameborder="0" allowfullscreen></iframe>
+                </div><!--//video-->
+                
+                
+                
+            </div><!--//row-->
+        </div><!--//container-->
+    </section><!--//how-->
+    
+    
